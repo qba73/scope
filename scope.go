@@ -10,6 +10,12 @@ var oidcScopes = &unicode.RangeTable{
 	},
 }
 
+// Valid takes a string representing OIDC token scope
+// and validates if the token conforms to RFC6749.
+// If the token does not contain invalid characters
+// it returns true, false otherwise.
+//
+// Ref. https://datatracker.ietf.org/doc/html/rfc6749#section-3.3
 func Valid(s string) bool {
 	for _, v := range s {
 		if !unicode.Is(oidcScopes, v) {

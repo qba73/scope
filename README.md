@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/qba73/scope)](https://goreportcard.com/report/github.com/qba73/scope)
+
 # scope
 
 `scope` is a Go library for validating OIDC token scopes. It allows you to verify if tokens meet validation requirements described in the [RFC6749](https://datatracker.ietf.org/doc/html/rfc6749#section-3.3) document.

@@ -1,3 +1,4 @@
+[![Go Reference](https://pkg.go.dev/badge/github.com/qba73/scope.svg)](https://pkg.go.dev/github.com/qba73/scope)
 [![Go](https://github.com/qba73/scope/actions/workflows/go.yml/badge.svg)](https://github.com/qba73/scope/actions/workflows/go.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/qba73/scope)](https://goreportcard.com/report/github.com/qba73/scope)
 

@@ -1,4 +1,4 @@
-// Package
+// Package scope provides functions for validating OIDC scopes.
 package scope
 
 import (

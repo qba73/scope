@@ -12,9 +12,9 @@ func TestValidOIDC_ReturnsTrueOnValidInput(t *testing.T) {
 
 	validInputs := []string{
 		"openid",
-		"openid+email",
-		"customScope+openid",
-		"myscope+openid+mysecondscope",
+		"openid email",
+		"customScope openid",
+		"myscope openid mysecondscope",
 	}
 	for _, v := range validInputs {
 		if !scope.ValidOIDC(v) {
@@ -74,19 +74,19 @@ func TestValid_ReturnsFalseOnInvalidInput(t *testing.T) {
 }
 
 func ExampleValidOIDC_validTokens() {
-	fmt.Println(scope.ValidOIDC("openid+myscope"))
+	fmt.Println(scope.ValidOIDC("openid myscope"))
 	// Output:
 	// true
 }
 
 func ExampleValidOIDC_invalidTokens() {
-	fmt.Println(scope.ValidOIDC("openid+m\x7fyscope"))
+	fmt.Println(scope.ValidOIDC("openid m\x7fyscope"))
 	// Output:
 	// false
 }
 
 func ExampleValidOIDC_missingRequiredToken() {
-	fmt.Println(scope.ValidOIDC("secondScope+email"))
+	fmt.Println(scope.ValidOIDC("secondScope email"))
 	// Output:
 	// false
 }

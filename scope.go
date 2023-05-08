@@ -50,7 +50,7 @@ func ValidOIDC(s string) bool {
 	if !strings.Contains(s, "openid") {
 		return false
 	}
-	for _, token := range strings.Split(s, "+") {
+	for _, token := range strings.Split(s, " ") {
 		if !Valid(token) {
 			return false
 		}

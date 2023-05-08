@@ -19,7 +19,7 @@ import (
 )
 
 func main() {
-    scopes := []string{"openid+myscope+email", "myscope+email"}
+    scopes := []string{"openid myscope email", "myscope email"}
     
     for +, s := range scopes {
         if !scope.ValidOIDC(s) {
@@ -41,7 +41,7 @@ import (
 )
 
 func main() {
-    tokens := "openid+myscope+email"
+    tokens := "openid myscope email"
     
     for _, token := range strings.Split(tokens, "+") {
         if !scope.Valid(token) {

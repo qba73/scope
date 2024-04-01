@@ -21,7 +21,7 @@ import (
 func main() {
     scopes := []string{"openid myscope email", "myscope email"}
     
-    for +, s := range scopes {
+    for _, s := range scopes {
         if !scope.ValidOIDC(s) {
             fmt.Println("invalid scope")
         }
